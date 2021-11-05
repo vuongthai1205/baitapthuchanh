@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		 function Count() {                          
+            var d = new Date();  
+            var age = d.getFullYear() - document.getElementById("txtYear").value;        
+            var name = document.getElementById("txtName").value;
+            document.getElementById("kq").innerHTML ="<p> Chào bạn " + name + "!" + "<br>" + "Tuổi của bạn là " + age + "</p>";                        
+        }
+	</script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container" >
+        <h2>CHƯƠNG TRÌNH TÍNH TUỔI</h2>
+	        <table border="1px">
+	            <tr>
+	                <td width="160px"><label for="txtName">Nhập vào tên bạn:</label></td>
+	                <td width="60%"><input type="text" id="txtName"></td>
+	            </tr>
+	            <tr>
+	                <td><label for="txtYear">Nhập vào năm sinh:</label></td>
+	                <td><input type="number" id="txtYear"></td>
+	            </tr>
+	        </table>             
+        <button class="buttonstyle" onclick="Count()">Tính tuổi</button>
+        <p id="kq"></p>   
+    </div> 
+</body>
+</html>

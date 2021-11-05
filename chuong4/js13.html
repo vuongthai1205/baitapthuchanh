@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+        function Default() {
+            document.getElementById("kq").style.color = "black";
+            document.getElementById("kq1").style.color = "black";
+            document.getElementById("kq1").style.backgroundColor = "white";
+            document.getElementById("kq1").style.fontWeight = "0";
+            document.getElementById("kq1").style.padding = "0";
+            document.getElementById("kq1").style.marginTop = "0";
+        }
+
+        function Style() {
+            document.getElementById("kq").style.color = "red";
+            document.getElementById("kq1").style.color = "yellow";
+            document.getElementById("kq1").style.backgroundColor = "blue";
+            document.getElementById("kq1").style.fontWeight = "bold";
+            document.getElementById("kq1").style.padding = "6px 0 6px 20px";
+            document.getElementById("kq1").style.marginTop = "20px";
+        }
+    </script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">            
+        <h1 id="kq">Thay đổi Style</h1>
+        <input type="radio" name="style" onchange="Default()">Mặc định<br>
+        <input type="radio" name="style" onchange="Style()" checked>Áp dụng Style
+        <div id="kq1">
+            <p>Click vào tùy chọn "Mặc định" chuyển về định dạng mặc định.</p>
+            <p>Click vào tùy chọn "Áp dụng Style" để áp dụng style định dạng</p>
+        </div>
+        
+    </div>
+</body>
+</html>

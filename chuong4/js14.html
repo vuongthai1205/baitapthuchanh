@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+        function Default(){
+            document.getElementById("kq").src = "../Images/iQuery.jpg"
+        }
+
+        function Change(){
+            document.getElementById("kq").src = "../Images/javascript.jpg"
+        }
+    </script>
+    <style type="text/css">
+    	img{
+    		width: 300px;
+
+    	}
+    </style>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container" style="width: 400px; margin: auto;">          
+        <h3>Lần lượt di chuyển con trỏ chuột lên hình và ra khỏi hình để xem hiệu ứng đổi hình.</h3>
+        <img src="../Images/javascript.jpg" id="kq" alt="chicken" onmouseover="Change()" onmouseout="Default()">
+    </div>
+</body>
+</html>

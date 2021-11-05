@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+        function Resize() {
+            var choose = document.getElementsByName("size");
+            for(let i=0; i < choose.length; i++) {
+                if(choose[i].checked) document.getElementById("kq").style.width = choose[i].value;
+            }                
+        }
+    </script>
+</head>
+<body>
+	<div class="container">            
+        <h1>Image Resizing</h1>
+        <hr>
+        <p>Scale:
+            <input type="radio" name="size" value = "10%" onclick = "Resize()">10%
+            <input type="radio" name="size" value = "25%" onclick = "Resize()">25%
+            <input type="radio" name="size" value = "50%" onclick = "Resize()" checked>50%
+        </p>
+        <img src="../Images/cafe.jpg" alt="background" id="kq">
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+        function replace(){
+            var s1 = document.getElementById("string1").value;
+            var s2 = document.getElementById("string2").value;
+            var s3 = document.getElementById("string3").value;
+            if(s2=="") return;
+            var pos = s1.indexOf(s2);
+            while(pos != -1) {
+                s1 = s1.replace(s2, s3);
+                pos = s1.indexOf(s2);
+            }
+            document.getElementById("string1").value = s1;
+        }
+    </script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">            
+            
+        <table  style="margin: auto;">
+            <caption><h2>THAY THẾ CHUỖI</h2></caption>
+            <tr>
+                <td>Chuỗi ban đầu:</td>
+                <td><input type="text" id="string1" style="width: 300px;"></td>
+            </tr>
+            <tr>
+                <td>Chuỗi bị thay thế:</td>
+                <td><input type="text" id="string2"></td>
+            </tr>
+            <tr>
+                <td>Chuỗi thay thế:</td>
+                <td><input type="text" id="string3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="replace()">Thực hiện</button></td>
+            </tr>
+        </table>           
+    </div>
+</body>
+</html>

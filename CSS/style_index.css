@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	color:red;
+}
+body{
+	background-color: whitesmoke;
+	font-family: 'Lato', sans-serif;
+}
+.list a{
+	text-decoration: none;
+}
+div{
+	margin: 0 16px;
+}
+h2{
+	animation: doimau 900ms linear infinite;
+}
+.list{
+	margin-top: 100px;
+
+	
+}
+.list a:hover{
+	color: black;
+	
+	transition: 900ms linear;
+	font-size: 24px;
+	margin-top: 10px;
+
+}
+@keyframes doimau {
+	from{
+		background-color: green;
+		color: black;
+		text-shadow: 2px 2px red;
+		box-shadow: 10px 10px 5px green;
+	}
+	to{
+		background-color: black;
+		color:red;
+		text-shadow: 2px 2px 5px blue;
+		box-shadow: 10px 10px 5px black;
+	}
+}

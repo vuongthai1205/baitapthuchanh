@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+        function reserve() {                
+            document.getElementById("string").value = document.getElementById("string").value.split(" ").reverse().join(" ");
+        }
+        function standardized() {
+            var getstr = document.getElementById("string").value.trim().split(" ");
+            var str="";
+            for(let i=0; i<getstr.length; i++) {
+                if(getstr[i] != ""){
+                    str += getstr[i].toLowerCase()[0].toUpperCase() + getstr[i].toLowerCase().substring(1) + " ";
+                }
+            }               
+            document.getElementById("string").value = str.trim();
+        }
+    </script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">            
+        <table style="margin:auto;">
+            <caption><h2>XỬ LÝ CHUỖI</h2></caption>
+            <tr>
+                <td>Chuỗi ban đầu:</td>
+                <td><input type="text" id="string" style="width: 250px;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" onclick="reserve()">Đảo chuỗi</button>
+                    <button type="button" onclick="standardized()">Chuẩn hóa chuỗi</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

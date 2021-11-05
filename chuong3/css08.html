@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cùng học lập trình</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		#title{
+			font-size: 32px;
+			color: #197617;
+		}
+		#menu{
+			margin: 12px 0;
+		}
+		#menu ul{
+			background-color: #16CBE6;
+		}
+		#menu ul li{
+			/*float: left;*/
+			display: inline-block;
+		}
+		#menu ul li:first-child{
+			color: #CDCB18;
+			font-size: 28px;
+			padding: 0 12px;
+			text-shadow: 3px 3px 3px black;
+			font-weight: bold;
+		}
+		#menu ul li a{
+			font-weight: bold;
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 20px;
+			text-decoration: none;
+		}
+		#menu ul li:last-child{
+			float: right;
+		}
+		#menu ul li a:hover{
+			background-color: aqua;
+		}
+		#signup button {
+		    padding: 10px 24px;
+		    border-radius: 8px;
+		    border: none;
+		    color: white;
+		    font-weight: bold;
+		    font-size: 14px;
+		    text-transform: uppercase;
+		    background-color: lightskyblue;
+		}
+		#signup button:hover{
+			background-color: aqua;
+    		color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="title">
+			<h1>Diễn đàn học lập trình</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>cunghoclaptrinh.com</li>
+				<li><a href="https://www.w3schools.com/html/">HTML</a></li>
+				<li><a href="https://www.w3schools.com/css/">CSS</a></li>
+				<li><a href="https://www.w3schools.com/js/">Javascript</a></li>
+				<li><a href="https://www.facebook.com/vuong.thai.123276/">Login</a></li>
+			</ul>
+		</div>
+		<div id="signup">
+			<p>Vui lòng click nút <span>Đăng ký</span> để tham gia khóa học</p>
+			<button type="submit">Đăng ký</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>                
+            function solve() {
+                var a = parseInt(document.getElementById("a").value),
+                b = parseInt(document.getElementById("b").value),
+                math = document.getElementsByName("select");                    
+                for(var i = 0; i < math.length; i++)
+                {
+                    if(math[i].checked){                            
+                        var chosen = math[i].value;
+                    }
+                }                    
+                switch (chosen)
+                {
+                    case '1': 
+                        document.getElementById("kq").innerHTML = a + b;
+                        break;
+                    case '2': 
+                        document.getElementById("kq").innerHTML = a - b;
+                        break;
+                    case '3': 
+                        document.getElementById("kq").innerHTML = a * b;
+                        break;
+                    case '4':
+                        if(b==0)
+                            document.getElementById("kq").innerHTML = "Lỗi chia 0!";
+                        else 
+                            document.getElementById("kq").innerHTML = (a / b).toFixed(2);
+                        break;
+                }                    
+           }    
+    </script>
+    <style>
+        table,td,tr,th {
+            border: 1px solid black;
+        }
+        table {width: 60%; margin: auto;}
+        tr>th>h2{padding-top: 0; margin-top:0;}
+        tr>td>div{
+            border: 1px solid gray;
+            width: 176px;
+            height: 20px;
+            border-radius: 2px;
+        }
+    </style> 
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+            <form>
+                <table>
+                    <tr>
+                        <th colspan="2"><h2>CÁC PHÉP TÍNH SỐ HỌC</h2></th>
+                    </tr>
+                    <tr>
+                        <td>Số thứ 1</td>
+                        <td><input type="number" id="a"></td>
+                    </tr>
+                    <tr>
+                        <td>Số thứ 2</td>
+                        <td><input type="number" id="b"></td>
+                    </tr>
+                    <tr>
+                        <td>Chọn phép toán</td>
+                        <td>                           
+                                <input type="radio" name="select" value="1">Cộng<br>
+                                <input type="radio" name="select" value="2">Trừ<br>
+                                <input type="radio" name="select" value="3">Nhân<br>
+                                <input type="radio" name="select" value="4">Chia                            
+                        </td>                                                
+                    </tr>
+                    <tr>
+                        <td><button type="button" onclick="solve()">Thực hiện</button></td>
+                        <td><div id="kq"></div></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+</body>
+</html>

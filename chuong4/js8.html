@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <script>
+        function Create() {
+            var n = document.getElementById("length").value;
+            const arr = [n];
+            for(let i=0; i < n; i++) {
+                arr[i] = Math.floor(Math.random()*50);
+            }
+            document.getElementById("kq1").innerHTML = arr.join("&nbsp &nbsp");
+        } 
+        
+        function IncreaseSort() {
+            let getarr = document.getElementById("kq1").innerHTML;                
+            var arr = getarr.split("&nbsp; &nbsp;");
+            arr.sort(function(a,b) {return a-b});
+            document.getElementById("kq2").innerHTML = arr.join("&nbsp &nbsp");
+        }
+        
+        function DecreaseSort() {
+            let getarr = document.getElementById("kq1").innerHTML;                
+            var arr = getarr.split("&nbsp; &nbsp;");
+            arr.sort(function(a,b) {return b-a});
+            document.getElementById("kq3").innerHTML = arr.join("&nbsp &nbsp");
+        }
+    </script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container" style="margin: auto; width: 400px;">            
+        <div>
+            <form>
+                Nhập số phần tử: 
+                <input type="number" id="length"> <br>
+                <button type="button" onclick="Create()">Tạo mảng</button>
+                <button type="button" onclick="IncreaseSort()">Sắp xếp mảng tăng</button>
+                <button type="button" onclick="DecreaseSort()">Sắp xếp mảng giảm</button>
+            </form>
+            <p>Mảng ban đầu: <span id="kq1"></span></p>
+            <p>Mảng tăng dần: <span id="kq2"></span></p>
+            <p>Mảng giảm dần: <span id="kq3"></span></p></div>
+    </div>
+</body>
+</html>

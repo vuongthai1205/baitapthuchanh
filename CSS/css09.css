@@ -1,0 +1,134 @@
+*{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+}
+.header{
+	height: 100px;
+	background-image: url(https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-Galaxy-lung-linh-huy%E1%BB%81n-%E1%BA%A3o.jpg);
+}
+.header h1{
+	text-transform: uppercase;
+	font-size: 40px;
+	text-align: center;
+	line-height: 100px;
+	color: #E2DB24;
+}
+.nav{
+	height: 42px;
+	text-align: center;
+	background-color: #4145F5;
+	margin: 10px 0;
+}
+.nav ul li{
+	display: inline-block;
+	/*padding: 12px 12px;*/
+	font-weight: bold;
+}
+/*.nav ul{
+	display: block;
+}*/
+.nav ul li a{
+	line-height: 42px;
+	padding: 0 12px;
+	display: inline-block;
+	color: #FFFFFF;
+	text-decoration: none;
+	/*text-align: center;*/
+	/*padding: 14px 20px;*/
+}
+.nav ul li:hover a{
+	background-color: #705F5F;
+}
+.content{
+	display: flex;
+	justify-content: space-between;
+}
+.left-content{
+	color: #fff;
+	background-color: #22C3AA;
+	width: 15%;
+}
+.left-content ul{
+	padding-left: 36px;
+
+}
+.left-content ul li{
+	
+	list-style-type: disc;
+	/*padding: 12px 0;*/
+}
+.left-content ul li a{
+	line-height: 40px;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+
+}
+.left-content ul li:hover a{
+	/*width: 100%;*/
+	text-decoration: underline;
+	background-color: #D2F097;
+	color: #000;
+}
+.center-content{
+	width: 55%;
+	display: flex;
+	justify-content: stretch;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border: 1px solid black;
+}
+
+.container-text{
+	display: flex;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.text-center-content{
+	width: 50%;
+	height: 250px;
+	margin: 10px;
+	text-align: justify;
+	/*font-size: 20px;*/
+	text-indent: 1cm;
+	word-spacing: 5px;
+	background-color: #CCCCCC;
+	padding: 5px;
+}
+.text-center-content:last-child{
+	overflow: scroll;
+    overflow-x: hidden;
+}
+
+.right-content{
+	width: 20%;
+	background-color: #22C3AA;
+}
+.ads-content{
+	background-color: #ECF5B9;
+	margin: 12px 12px;
+	height: 184px;
+	text-align: center;
+	padding-top: 44px;
+	border-radius: 25px;
+	font-weight: bold;
+}
+.footer{
+	background-color: blue;
+    text-align: center;  
+    color:yellow;
+    font-weight: bold;
+    font-size:20px;            
+    padding-top: 12px; 
+    padding-bottom: 12px;
+    margin-top: 5px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Món ngon</title>
+	<style type="text/css">
+		*{
+			padding: 4px;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		table{
+			border: solid 1px black;
+		}
+		caption{
+			font-size: 20px;
+		}
+		/*table{
+			border-collapse: collapse;*/
+			/*top: 0;
+		}*/
+		/*table:nth-child(1){
+			background-color: black;
+		}*/
+		
+		tbody tr:nth-child(even){
+			background-color: silver;
+		}
+		tbody tr:nth-child(odd){
+			background-color: whitesmoke;
+		}
+		thead{
+			color: white;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="table">
+		<table>
+			<caption><b>Món ngon: Thịt kho sả</b></caption>
+			<thead>
+				<th>Nguyên liệu</th>
+				<th>Số lượng</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Thịt nạt băm</td>
+					<td>200g</td>
+				</tr>
+				<tr>
+					<td>Củ sả</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>Ớt hiểm </td>
+					<td>1 trái</td>
+				</tr>
+				<tr>
+					<td>Gia vị: Muối nước mắm đường hạt nêm</td>
+					<td>Vừa đủ</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

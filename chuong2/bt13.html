@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Phần đầu-->
+	<meta charset="utf-8">
+	<title>Bài tập 13</title>
+	<style type="text/css">
+		body{
+			color: black;
+		}
+		
+	</style>
+</head>
+<body>
+	<form action="" method="get">
+		<table border="1" width="70%%">
+			<tr>
+				<td>Họ tên</td>
+				<td colspan="3"><input type="text" name="Hoten" placeholder="Hãy nhập họ tên ở đây"></td>
+			</tr>
+			<tr>
+				<td>Giớt tính</td>
+				<td><input type="radio" name="gioitinh" value="nu" checked>Nữ
+				<input type="radio" name="gioitinh" value="nam" checked>Nam</td>
+			</tr>
+			<tr>
+				<td>Điều bạn quan tâm nhất</td>
+				<td><input type="checkbox" name="quantam" value="kinhte">Kinh tế
+				<input type="checkbox" name="quantam" value="xahoi">Xã hội
+				<input type="checkbox" name="quantam" value="Giải trí">Giải trí</td>
+			</tr>
+			<tr>
+				<td>Địa chỉ</td>
+				<td><textarea rows="5" cols="105"></textarea></td>
+			</tr>
+			<tr>
+				<td>Học vấn</td>
+				<td><select name="hocvan">
+					<option value="daihoc">Đại học</option>
+					<option value="caodang">Cao đẳng</option>
+					<option value="thpt">THPT</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" name="gui" value="Gửi Thông Tin">
+					<input type="reset" name="reset" value="Reset"></td>
+			</tr>
+		</table>
+	</form>
+	<a href="../web.html">Về trang trước</a>
+</body>
+</html>

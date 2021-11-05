@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+        h1{                
+            border: 1px solid blue;
+            font-weight: normal;                
+            padding: 5px;
+            width: 294.9px; 
+            margin: auto;
+            margin-bottom: 20px;
+            text-align: center;              
+        }
+        
+    </style>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+        <div>
+            <h1 id="a"></h1>
+            <h1 id="b"></h1>
+        </div>
+        <script>
+        var text1 =" HTML-JAVASCRIPT ", text2 = text1;
+        var doright = setInterval(right, 100);
+        var doleft = setInterval(left, 100); 
+
+        function right() {
+            let text= text1.split(""), temp = text.shift(); 
+            text.push(temp);                   
+            document.getElementById("a").innerHTML = text.join("");
+            text1 = text.join("");
+        }        
+        
+        function left() {
+            let text= text2.split(""), temp = text.pop(); 
+            text.unshift(temp);                   
+            document.getElementById("b").innerHTML = text.join("");
+            text2 = text.join("");
+        }
+        </script>
+    </div>
+</body>
+</html>

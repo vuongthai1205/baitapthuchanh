@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+        table, tr, td{
+            border: 1px solid black;               
+        }
+        td{padding: 0 35px 0 35px;}
+    </style> 
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+        <h2 align="center">BẢNG CỬU CHƯƠNG</h2>
+        <table id="kq" align="center">                
+        </table>
+    </div>
+    <script>
+        var s="", table = document.getElementById("kq"), i = 0, j = 0;
+        for(let x = 2; x <=9; x++){
+            for(let i = 2; i < 10; i++){
+            s += x + " x " + i + " = " + x*i + "<br>";
+            }
+            if(i > 3) {i=0;}
+            if(x == 2 || x == 6) {
+                var row = table.insertRow(j);
+                let cell = row.insertCell(i);
+                cell.innerHTML = s;
+                i++;
+                j++;
+            }
+            else{
+                let cell = row.insertCell(i);
+                cell.innerHTML = s;
+                i++;
+            }
+            s="";                
+        }            
+    </script>
+</body>
+</html>

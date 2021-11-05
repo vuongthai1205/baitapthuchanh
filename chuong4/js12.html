@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <script>
+       function change() {
+           document.getElementById("kq").innerHTML = document.getElementById("content").value;
+           document.getElementById("kq").style.backgroundColor = document.getElementById("bgdcolor").value;
+           document.getElementById("kq").style.color = document.getElementById("wcolor").value;
+       }
+    </script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container" style="width: 340px; margin: auto;">            
+        <h1 id="kq"></h1>
+        <p>Nhập nội dung:<input type = "text" id="content" value="WELCOME HTML5!"></p>
+        <p>Màu nền:<input type= "color" id="bgdcolor" value="#ff0000"></p>
+        <p>Màu chữ:<input type= "color" id="wcolor" value="#FFFF80"></p>
+        <button type="button" onclick="change()">Thực hiện</button>
+    </div>
+</body>
+</html>

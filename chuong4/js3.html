@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <script>
+           function solve() {
+               var a = document.getElementById("a").value,
+               b = document.getElementById("b").value,
+               c = document.getElementById("c").value,
+               delta = (b*b) - (4*a*c);                   
+               if(delta > 0) {
+                    var x1 = parseFloat((-b + Math.sqrt(delta)) / (2*a));
+                    var x2 = parseFloat((-b - Math.sqrt(delta)) / (2*a));
+                    document.getElementById("kq").innerHTML=
+                    "<b>Phương trình có 2 nghiệm là:<br>" +
+                    "x1 = " + x1.toFixed(2) + "<br>" + 
+                    "x2 = " + x2.toFixed(2) + "</b>";
+               }
+               else if(delta == 0) {
+                    var x = parseFloat(-b / (2*a));
+                    document.getElementById("kq").innerHTML=
+                    "<b>Phương trình có 1 nghiệm kép là:<br>" +
+                    "x = " + x.toFixed(2) + "</b>";                       
+               }
+               else if(delta < 0) {
+                    var v1 = parseFloat(-b/ (2*a));
+                    var v2 = parseFloat(Math.sqrt(-delta) / (2*a));
+                    document.getElementById("kq").innerHTML=
+                    "<b>Phương trình có 2 nghiệm phức là:<br>" +
+                    "x1 = " + v1.toFixed(2) + " + " + v2.toFixed(2) +"i "+ "<br>" + 
+                    "x2 = " + v1.toFixed(2) + " - " + v2.toFixed(2) +"i " + "</b>";
+               }
+           }    
+    </script>
+    <style>
+            .container{
+                width: 640px;
+                height: 34wx;
+                margin: auto;
+            }
+            .centerp{
+                text-align:center;
+            }            
+            table{
+                background-color:rgba(248, 224, 204, 0.89);
+                border : 2px solid black;
+                border-collapse: collapse;              
+            }
+            td, tr{
+                border : 1px solid black;
+                padding: 5px;                
+            }
+            .margin{
+                margin-left: 83px;
+            }
+        </style> 
+	<title>Document</title>
+</head>
+<body>
+	<div class="main">
+        <div class="container">
+            <h2 class="centerp">CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH BẬC 2</h2>
+            <p class="centerp"><b>ax<sup>2</sup> + bx + c = 0</b></p>
+	        <form>
+	            <table align="center">
+	                <tr>
+	                    <td width = 130px>a = </td>
+	                    <td width = "70%"><input type="number" id="a"></td>
+	                </tr>
+	                <tr>
+	                    <td>b = </td>
+	                    <td><input type="number" id="b"></td>
+	                </tr>
+	                <tr>
+	                    <td>c = </td>
+	                    <td><input type="number" id="c"></td>
+	                </tr>
+	                <tr>
+	                    <td></td>
+	                    <td>
+	                        <button type="button" onclick="solve()">Giải</button>
+	                        <button type="reset">Xóa</button>
+	                    </td>
+	                </tr>
+	            </table> 
+	        </form>
+	        <p class="margin" id="kq"></p>
+        </div>       
+    </div>
+</body>
+</html>

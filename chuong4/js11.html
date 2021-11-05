@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+        function statistic(){
+            var s = document.getElementById("string").value.trim(),
+            table = document.getElementById("tb"), RowNum = 4;
+            document.getElementById("CharacterNum").innerHTML = s.length;
+            document.getElementById("WordNum").innerHTML = s.split(" ").length;
+            const str = [s.length];
+            for(let i = 0; i<s.length; i++){
+                let j =  s.toUpperCase().charCodeAt(i)
+                if( (j >= 48 && j <= 57) || (j >= 65 && j <= 90)){
+                    str[i] = j;
+                }
+            }
+            var newstr = str.sort(function(a,b) {return a - b}).join(" ").trim().split(" ");
+            for(let i=0; i<newstr.length; i++) {
+                var count = 1;
+                for(let j = i + 1; j<newstr.length; j++) {
+                    if(newstr[i] == newstr[j]) {
+                        count++;                           
+                    }                        
+                }
+                if(newstr[i] != newstr[i-1]) {
+                    var row = table.insertRow(RowNum);
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+                    cell2.innerHTML = "Chacracter '" + String.fromCharCode(newstr[i]) + "': " + count;
+                    RowNum++;                        
+                }                    
+            }
+        }
+    </script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">            
+        <table style="margin:auto;" id="tb">
+            <caption><h2>String Statistic</h2></caption>
+            <tr>
+                <td>String:</td>
+                <td><input type="text" id="string" style="width: 250px;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" onclick="statistic()">Statistic</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Character: <span id="CharacterNum"></span></td>         
+            </tr>
+            <tr>
+                <td></td>
+                <td>Word: <span id="WordNum"></span></td>   
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

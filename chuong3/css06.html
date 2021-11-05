@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Overflow</title>
+	<style type="text/css">
+		/*.main{
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+		}*/
+		div{
+			width: 200px;
+			height: 200px;
+			margin-bottom: 5px;
+			display: inline-block;
+			border: solid 1px;
+			background-color: yellow;
+			text-align: justify;
+		}
+		.div1{
+			margin: 16px 0;
+			display: inline-block;
+		}
+		.div2{
+			/*display: inline-block;*/
+			line-height: 24px;
+			overflow: hidden;
+		}
+		.div3{
+			overflow: scroll;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="main"> -->
+		
+		<div class="div1" >
+			Văn bản trong phần tử div 1 sử dụng các thuộc tính mặc định phần văn bản thừa sẽ tràn ra ngoài.
+			Văn bản trong phần tử div 1 sử dụng các thuộc tính mặc định phần văn bản thừa sẽ tràn ra ngoài.
+			Văn bản trong phần tử div 1 sử dụng các thuộc tính mặc định phần văn bản thừa sẽ tràn ra ngoài.
+			Văn bản trong phần tử div 1 sử dụng các thuộc tính mặc định phần văn bản thừa sẽ tràn ra ngoài.
+		</div>
+		<div class="div2">
+			Văn bản trong phần tử div 2 có thuộc tính line height: 20px overflow: hidden; không có thanh cuộn phần văn bản sẽ bị ẩn.
+			Văn bản trong phần tử div 2 có thuộc tính line height: 20px overflow: hidden; không có thanh cuộn phần văn bản sẽ bị ẩn.
+			Văn bản trong phần tử div 2 có thuộc tính line height: 20px overflow: hidden; không có thanh cuộn phần văn bản sẽ bị ẩn.
+			Văn bản trong phần tử div 2 có thuộc tính line height: 20px overflow: hidden; không có thanh cuộn phần văn bản sẽ bị ẩn.
+		</div>	
+		<div class="div3">
+			Văn bản trong phần tử 3 có thuộc tính over flow: scroll có thanh cuộn.
+			Văn bản trong phần tử 3 có thuộc tính over flow: scroll có thanh cuộn.
+			Văn bản trong phần tử 3 có thuộc tính over flow: scroll có thanh cuộn.
+			Văn bản trong phần tử 3 có thuộc tính over flow: scroll có thanh cuộn.
+			Văn bản trong phần tử 3 có thuộc tính over flow: scroll có thanh cuộn.
+			Văn bản trong phần tử 3 có thuộc tính over flow: scroll có thanh cuộn.
+		</div>
+	<!-- </div> -->
+</body>
+</html>
